@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" ng-app="appOne">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width">
@@ -7,11 +7,10 @@
     <link rel="stylesheet" href="css/full.css">
     <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed|Roboto:400,700" rel="stylesheet">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.0.0/jquery.min.js"></script>
-    <script type="text/javascript" src="/js/modernizr.js"></script>
-    <script type="text/javascript" src="/js/angular.min.js"></script>
+    >
 
   </head>
-  <body>
+  <body ng-controller="HomeController">
     <span class="cc-bars menu-btn"></span>
     <nav class="top-nav">
       <div class="close-btn cc-times"></div>
@@ -29,8 +28,8 @@
     </nav> -->
 
     <header class="hero">
-      <h1>This is the header</h1>
-      <h2>This is the byline everyone reads</h2>
+      <h1>{{herotitle}}</h1>
+      <h2>{{byline}}</h2>
     </header>
     <main id="z-grid">
       <div class="item highlight">
@@ -117,6 +116,12 @@
         </div>
       </div>
     </main>
+
+    <script type="text/javascript" src="/js/modernizr.js"></script>
+    <script type="text/javascript" src="/js/angular.min.js"></script>
+    <script type="text/javascript" src="/js/app.js"></script>
+    <!-- Controllers -->
+    <script type="text/javascript" src="/js/controllers/home-controller.js"></script
     <script type="text/javascript">
       $(document).ready(function(){
         $('nav > .close-btn, .menu-btn').on('click', function(){
